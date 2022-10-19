@@ -21,9 +21,16 @@
     </head>
     <body>
         <header>
-            <img src="assets/logo2.png" alt="Logotipo" />
+            <img
+                src="assets/logo2.png"
+                alt="Logotipo"
+                width="50px"
+                height="50px"
+            />
             <nav>
-                <img src="assets/menu-icon.svg" alt="Icono menú" />
+                <button>
+                    <img src="assets/menu-icon.svg" alt="Icono menú" />
+                </button>
                 <ul>
                     <li>
                         <a href="#"><p>Home</p></a>
@@ -33,6 +40,8 @@
                         <img
                             src="assets/arrow-icon.svg"
                             alt="Icono desplegar"
+                            width="10px"
+                            height="10px"
                         />
                         <ul>
                             <li>
@@ -57,9 +66,15 @@
                         <img
                             src="assets/arrow-icon.svg"
                             alt="Icono desplegar"
+                            width="10px"
+                            height="10px"
                         />
                     </li>
-                    <li><button>BUY NOW</button></li>
+                    <li>
+                        <button type="button" class="btn btn-outline">
+                            BUY NOW
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -68,13 +83,14 @@
                 <h1>PET ACTIVITIES</h1>
                 <div>
                     <h2>Take a closer look</h2>
-                    <button>VIEW ALL</button>
+                    <button type="button" class="btn btn-solid">
+                        VIEW ALL
+                    </button>
                 </div>
-                <ul>
+                <ul class="cards-group">
                     <li>
                         <a href="#">
-                            <div>
-                                <img src="assets/01.jpg" alt="Toys playtime" />
+                            <div class="card card-sec1-01">
                                 <p>ACTIVITIES</p>
                                 <h3>Toys Playtime</h3>
                             </div>
@@ -82,8 +98,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <div>
-                                <img src="assets/02.jpg" alt="Active rest" />
+                            <div class="card card-sec1-02">
                                 <p>ACTIVITIES</p>
                                 <h3>Active Rest</h3>
                             </div>
@@ -91,8 +106,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <div>
-                                <img src="assets/03.jpg" alt="Game walks" />
+                            <div class="card card-sec1-03">
                                 <p>ACTIVITIES</p>
                                 <h3>Game Walks</h3>
                             </div>
