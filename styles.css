@@ -102,6 +102,7 @@ header {
 
 nav li {
     cursor: pointer;
+    font-weight: 800;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,6 +132,7 @@ nav ul {
 }
 
 nav > ul li {
+    position: relative;
     align-items: center;
     margin-left: 2em;
     padding: 1em 0;
@@ -152,6 +154,23 @@ nav li p + img {
 
 nav ul ul {
     display: none;
+}
+@media screen and (min-width: 768px) {
+    nav ul ul {
+        position: absolute;
+        top: 2.5em;
+        left: -1em;
+        min-width: 220px;
+        display: block;
+        text-align: left;
+        background-color: var(--on-color);
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul ul li {
+        width: 100%;
+        margin: 0 1em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 }
 
 main {
