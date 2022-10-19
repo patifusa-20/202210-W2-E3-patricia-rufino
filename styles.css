@@ -49,10 +49,18 @@ body {
     padding: 1em 1.2em;
     letter-spacing: 1px;
     border-radius: 0 1.4em 1.4em;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .btn {
+        font-size: 1rem;
+        padding: 1.2em 1.6em;
+    }
 }
 
 .btn-outline {
     border: 3px solid #ed6436;
+    padding: 0.5rem 1.3rem;
 }
 
 .btn-solid {
@@ -71,6 +79,10 @@ header {
     padding: 1em;
     background-color: var(--on-color);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav li {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -127,15 +139,36 @@ main h1 {
     color: var(--primary-color);
 }
 
+@media screen and (min-width: 768px) {
+    main h1 {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .subtitle-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 main h2 {
     margin: 0.3em auto 0.8em;
     font-size: 2.1rem;
     color: var(--text-color);
 }
+@media screen and (min-width: 768px) {
+    main h2 {
+        font-size: 4rem;
+        margin: 0;
+    }
+}
 
 @media screen and (min-width: 768px) {
     section {
-        max-width: 80%;
+        max-width: 70%;
         margin: auto;
     }
 }
@@ -173,7 +206,14 @@ main h2 {
 
 @media screen and (min-width: 768px) {
     .card {
-        min-height: 350px;
+        min-height: 400px;
+        justify-content: center;
+    }
+    .card:first-child {
+        margin-left: 0;
+    }
+    .card:last-child {
+        margin-left: 0;
     }
 }
 
@@ -185,6 +225,17 @@ main h2 {
     width: 100%;
     border-radius: 2em;
     background-color: rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 768px) {
+    .card::after {
+        content: "";
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .card:hover::after {
+        content: "";
+        opacity: 1;
+    }
 }
 
 .card-sec1-01 {
@@ -200,6 +251,16 @@ main h2 {
 .card > * {
     z-index: 1;
 }
+@media screen and (min-width: 768px) {
+    .card > * {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .card:hover > * {
+        opacity: 1;
+    }
+}
+
 .card p {
     font-size: 0.8rem;
 }
