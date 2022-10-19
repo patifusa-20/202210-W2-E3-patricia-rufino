@@ -16,7 +16,9 @@ ul {
     padding: 0;
 }
 
-a {
+a,
+a:link {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -61,11 +63,22 @@ body {
 .btn-outline {
     border: 3px solid #ed6436;
     padding: 0.5rem 1.3rem;
+    transition: all 0.5s;
+}
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--on-color);
 }
 
 .btn-solid {
     background-color: var(--primary-color);
     color: var(--on-color);
+    transition: all 0.5s;
+}
+.btn-solid:hover {
+    color: var(--primary-color);
+    border: 3px solid #ed6436;
+    background-color: var(--on-color);
 }
 
 /* / */
@@ -79,6 +92,12 @@ header {
     padding: 1em;
     background-color: var(--on-color);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 0 1em;
+    }
 }
 
 nav li {
@@ -114,6 +133,12 @@ nav ul {
 nav > ul li {
     align-items: center;
     margin-left: 2em;
+    padding: 1em 0;
+    transition: all 0.3s;
+}
+nav > ul > li:not(:last-child):hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 @media screen and (min-width: 768px) {
     nav > ul li {
@@ -266,5 +291,13 @@ main h2 {
 }
 .card h3 {
     padding-bottom: 1.2em;
+}
+@media screen and (min-width: 768px) {
+    .card p {
+        font-size: 1.2em;
+    }
+    .card h3 {
+        font-size: 1.8em;
+    }
 }
 /* / */
